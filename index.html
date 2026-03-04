@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Christ's Perfection Academy</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            color: #1c2b4a;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: url("hero.jpg") center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            padding-left: 8%;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background: #d6a84f;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ABOUT SECTION */
+        .about {
+            background: #f4f4f4;
+            padding: 60px 0;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        /* ADMISSION FORM */
+        .admission {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .admission h2 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .admission-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .admission-form input {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .form-btn {
+            margin-top: 30px;
+        }
+
+        .btn-secondary {
+            background: #1c2b4a;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* FEATURES SECTION */
+        .features {
+            background: #f4f4f4;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .feature-grid {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            width: 30%;
+        }
+
+        .icon-circle {
+            background: #d6a84f;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            font-size: 28px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Shaping Excellence<br>from JSS1 to SS3</h1>
+            <a href="#admission" class="btn-primary">Apply Now</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2>Welcome to Christ’s Perfection Academy</h2>
+                <p>At CPA, we nurture young minds to achieve academic excellence and strong moral values.</p>
+                <p>Our experienced teachers and well-structured curriculum ensure every child reaches their full
+                    potential.</p>
+            </div>
+            <div class="about-image">
+                <img src="student.jpg" alt="Student">
+            </div>
+        </div>
+    </section>
+
+    <section class="admission" id="admission">
+        <div class="container">
+            <h2>Online Student Admission Form</h2>
+
+            <form class="admission-form">
+                <input type="text" placeholder="Full Name">
+                <input type="date">
+                <input type="text" placeholder="Gender">
+                <input type="text" placeholder="Class Applying For">
+                <input type="text" placeholder="Parent/Guardian Name">
+                <input type="text" placeholder="Parent Phone Number">
+                <input type="email" placeholder="Parent Email">
+                <input type="text" placeholder="Previous School">
+                <input type="text" placeholder="Home Address">
+                <input type="text" placeholder="Special Needs / Notes">
+            </form>
+
+            <div class="form-btn">
+                <button class="btn-secondary">Submit Application</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Christ’s Perfection Academy?</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon-circle">📖</div>
+                    <p>Experienced, caring teachers</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-circle">🎓</div>
+                    <p>Strong academic foundation & character building</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-circle">💛</div>
+                    <p>Modern learning environment and facilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
