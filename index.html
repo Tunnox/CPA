@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christ's Perfection Academy</title>
+
     <link rel="icon" type="image/jpeg"
         href="https://raw.githubusercontent.com/Tunnox/CPA-IMAGES/main/20260304_153523801_iOS.jpg">
 
@@ -17,32 +19,59 @@
 
         body {
             color: #1c2b4a;
+            line-height: 1.6;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
         }
 
         /* HERO SECTION */
         .hero {
             position: relative;
-            /* REQUIRED */
             background: url("https://raw.githubusercontent.com/Tunnox/CPA-IMAGES/main/20260304_153553354_iOS.jpg") center/cover no-repeat;
-            height: 80vh;
+            min-height: 80vh;
             display: flex;
-            align-items: flex-start;
-            padding-top: 20px;
-            padding-left: 8%;
-            color: rgb(255, 255, 255);
+            align-items: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            margin-bottom: 20px;
         }
 
         .hero-logo {
             position: absolute;
-            /* REQUIRED */
             top: 20px;
             right: 20px;
-            width: 70px;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            width: 60px;
+            z-index: 3;
         }
 
         .btn-primary {
@@ -52,6 +81,11 @@
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
         }
 
         /* ABOUT SECTION */
@@ -60,14 +94,9 @@
             padding: 60px 0;
         }
 
-        .container {
-            width: 85%;
-            margin: auto;
-        }
-
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
             align-items: center;
         }
@@ -77,17 +106,11 @@
             margin-bottom: 20px;
         }
 
-        .about-text p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
         .about-image img {
-            width: 100%;
             border-radius: 12px;
         }
 
-        /* ADMISSION FORM */
+        /* ADMISSION SECTION */
         .admission {
             padding: 60px 0;
             text-align: center;
@@ -100,7 +123,7 @@
 
         .admission-form {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
 
@@ -108,6 +131,7 @@
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 6px;
+            width: 100%;
         }
 
         .form-btn {
@@ -121,6 +145,11 @@
             border-radius: 8px;
             border: none;
             cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-secondary:hover {
+            opacity: 0.9;
         }
 
         /* FEATURES SECTION */
@@ -131,13 +160,14 @@
         }
 
         .feature-grid {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
             margin-top: 40px;
         }
 
         .feature-card {
-            width: 30%;
+            padding: 20px;
         }
 
         .icon-circle {
@@ -152,12 +182,19 @@
             font-size: 28px;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        /* MOBILE EXTRA TUNING */
+        @media (max-width: 480px) {
+            .hero {
+                text-align: center;
+            }
 
-        .logo {
-            width: 120px;
+            .hero-logo {
+                width: 50px;
+            }
+
+            .hero-content {
+                margin: auto;
+            }
         }
     </style>
 
